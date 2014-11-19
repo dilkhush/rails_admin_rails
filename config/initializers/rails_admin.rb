@@ -1,6 +1,5 @@
 RailsAdmin.config do |config|
 
-  config.default_items_per_page = 50
   ### Popular gems integration
 
   ## == Devise ==
