@@ -6,29 +6,20 @@ class Sampler < ActiveRecord::Base
 
   rails_admin do
     edit do
-      field :name do
-        label "Name"
-      end
-      field :wines do
-        label "Wines"
-      end
+      field :name
+      field :wines
     end
 
     list do
-      field :name do
-        label 'Name'
-      end
+      field :id
+      field :name
       field :wines_count do
         formatted_value do 
           value
         end
         label 'Wines Count'
       end
-      fields :created_at, :updated_at do
-        label do
-          "#{label} (timestamp)"
-        end
-      end
+      fields :created_at, :updated_at
     end
 
     show do
