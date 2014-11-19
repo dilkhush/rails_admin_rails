@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    if user_signed_in? && !current_user.is_admin?
+    if user_signed_in? && current_user.is_admin?
       rails_admin_url
     else
       root_url
