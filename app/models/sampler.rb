@@ -29,6 +29,10 @@ class Sampler < ActiveRecord::Base
           "#{label} (timestamp)"
         end
       end
+      field :disable do
+        label 'disable'
+      end
+      
     end
 
     show do

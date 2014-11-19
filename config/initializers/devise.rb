@@ -12,6 +12,17 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  config.omniauth :facebook, "752456721475966", "aa088e7524e1fde37b4cd8f1ced33b01"
+  
+  # require 'omniauth-twitter'
+  config.omniauth :twitter, "T91ITk4DV7axaSkGQv5s9ohFL", "ylK2Wwi0YwORG6rUFor2cjxFYQLIxb9oWvR7cT9Om2Qfu7Mn1t"
+
+
+  config.omniauth :linkedin, "755u5v2823r19f", "d3yZZZwh1jcv15r2"
+
+  config.omniauth :google_oauth2, "54219944738-fu6v8d4mbdteeqmb96edu2bn5654nh8p.apps.googleusercontent.com", "cP0TogvCfWjjArdKOAb7sMxP"
+
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
