@@ -27,37 +27,8 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
-
-    config.model 'Sampler' do
-      edit do
-        field :name do
-          label "Name"
-        end
-        field :wines do
-          label "Wines"
-        end
-      end
-
-      list do
-        fields :created_at, :updated_at do          # adding and configuring
-          label do
-            "#{label} (timestamp)"
-          end
-        end
-        field :name do
-          label 'Name'
-        end
-        field :wines_count do
-          formatted_value do 
-            value
-          end
-          label 'Wines Count'
-        end
-      end
-    end
-
     ## With an audit adapter, you can add:
-    # history_index
-    # history_show
+    history_index
+    history_show
   end
 end
