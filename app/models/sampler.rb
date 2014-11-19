@@ -6,18 +6,13 @@ class Sampler < ActiveRecord::Base
 
   rails_admin do
     edit do
-      field :name do
-        label "Name"
-      end
-      field :wines do
-        label "Wines"
-      end
+      field :name
+      field :wines
     end
 
     list do
-      field :name do
-        label 'Name'
-      end
+      field :id
+      field :name
       field :wines_count do
         formatted_value do 
           value
@@ -32,7 +27,6 @@ class Sampler < ActiveRecord::Base
       field :disable do
         label 'disable'
       end
-      
     end
 
     show do
